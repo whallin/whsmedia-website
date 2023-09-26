@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import SiteHead from '../components/SiteHead.astro';
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>{title} - WHS Media</title>
+		<meta property="og:title" content=`${title} - WHS Media` />
+		<meta property="twitter:title" content=`${title} - WHS Media` />
+		<meta name="author" content="WHS Media" />
+		<SiteHead />
+	</head>
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-iconify";
+import WIPLanding from "../layouts/WIPLanding.astro";
+
+import whslogomark from "../img/whs-logomark.svg";
+---
+
+<WIPLanding title="Hem">
+    <div class="flex flex-col gap-10 max-w-screen-sm">
+        <div class="w-full flex bg-[#FF3A3A] py-4 px-6 rounded items-center gap-4">
+            <Icon name="tabler:info-circle-filled" width="32" height="32" class="text-[#fff]" />
+            <p class="text-stone-50">Vi bygger i nuläget färdigt våran hemsida, ursäkta stöket!</p>
+        </div>
+        <Image src={whslogomark} alt="" height="48" class="select-none" />
+        <h1 class="text-5xl tracking-tight">Vi är <span class="text-[#FF3A3A] font-display">WHS Media</span></h1>
+        <p>
+            Vi specialiserar inom <b class="text-[#FF3A3A]">medieproduktion & live/TV-produktion</b> och kan hjälpa dig att skapa imponerande innehåll som engagerar och inspirerar din publik.
+            <br><br>
+            Oavsett om det gäller <b class="text-[#FF3A3A]">direktsändningar, reklamfilmer eller fotografering</b>, så har vi den kompetens och erfarenhet som krävs för att leverera ett imponerande resultat. 
+            <br><br>
+            Vi anpassar våra lösningar efter dina specifika behov och budget för att säkerställa att du får <b class="text-[#FF3A3A]">den bästa produkten för pengarna</b>.
+        </p>
+        <div class="flex flex-col gap-5">
+            <p>
+                <b class="text-[#FF3A3A]">Är du intresserad av våra tjänster?</b> Kontaka oss via våra platformar och låt oss börja planera just ditt projekt!
+            </p>
+            <div class="flex gap-5">
+                <a href="mailto:kontakt@whsmedia.se">
+                    <Icon name="tabler:mail-filled" width="36" class="text-[#FF3A3A]/75 hover:text-[#FF3A3A] transition duration-150" />
+                </a>
+                <a href="https://instagram.com/whs_media_" target="_blank">
+                    <Icon name="tabler:brand-instagram" width="36" class="text-[#FF3A3A]/75 hover:text-[#FF3A3A] transition duration-150" />
+                </a>
+            </div>
+        </div>
+    </div>
+</DefaultLayout>
