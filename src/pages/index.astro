@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon";
 import WIPLanding from "../layouts/WIPLanding.astro";
 
 import whslogomark from "../img/whs-logomark.svg";
@@ -9,7 +9,7 @@ import whslogomark from "../img/whs-logomark.svg";
 <WIPLanding title="Hem">
     <div class="flex flex-col gap-10 max-w-screen-sm">
         <div class="w-full flex bg-[#FF3A3A] py-4 px-6 rounded items-center gap-4">
-            <Icon name="tabler:info-circle-filled" width="32" height="32" class="text-[#fff]" />
+            <Icon name="tabler:info-circle" width="32" height="32" class="text-[#fff]" />
             <p class="text-stone-50">Vi bygger i nuläget färdigt våran hemsida, ursäkta stöket!</p>
         </div>
         <Image src={whslogomark} alt="" height="48" class="select-none" />
@@ -27,7 +27,7 @@ import whslogomark from "../img/whs-logomark.svg";
             </p>
             <div class="flex gap-5">
                 <a href="mailto:kontakt@whsmedia.se">
-                    <Icon name="tabler:mail-filled" width="36" class="text-[#FF3A3A]/75 hover:text-[#FF3A3A] transition duration-150" />
+                    <Icon name="tabler:mail" width="36" class="text-[#FF3A3A]/75 hover:text-[#FF3A3A] transition duration-150" />
                 </a>
                 <a href="https://instagram.com/whs_media_" target="_blank">
                     <Icon name="tabler:brand-instagram" width="36" class="text-[#FF3A3A]/75 hover:text-[#FF3A3A] transition duration-150" />
@@ -35,4 +35,4 @@ import whslogomark from "../img/whs-logomark.svg";
             </div>
         </div>
     </div>
-</DefaultLayout>
+</WIPLanding>
