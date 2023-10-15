@@ -9,7 +9,7 @@ export default {
         sans: ["Inter", defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        landing: "url('https://placehold.co/1280x720/171717/404040')",
+        landing: "url('https://placehold.co/1920x1080/171717/404040')",
       },
       colors: {
         whs: {
