@@ -17,6 +17,7 @@ const { style, link, target, icon, text } = Astro.props;
   target={target}
   class="w-full sm:w-fit"
   aria-label=`Gå till ${link}`
+  rel="prefetch"
 >
   <button
     class:list={[

@@ -1,3 +1,7 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+---
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="canonical" href={Astro.url} />
@@ -51,3 +55,6 @@
   src=`${import.meta.env.PUBLIC_UMAMI_URL}`
   data-website-id=`${import.meta.env.PUBLIC_UMAMI_ID}`></script>
 -->
+
+<!-- Transitions -->
+<ViewTransitions />

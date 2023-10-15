@@ -23,6 +23,7 @@ const { avatar, name, title, email, phone, description } = Astro.props;
         target="_blank"
         class="transition duration-200 hover:opacity-50"
         aria-label=`Skicka ett mejl till ${email}`
+        rel="prefetch"
       >
         <Icon name="mdi:email" width="24" />
       </a>
@@ -31,6 +32,7 @@ const { avatar, name, title, email, phone, description } = Astro.props;
         target="_blank"
         class="transition duration-200 hover:opacity-50"
         aria-label=`Ring ${email}`
+        rel="prefetch"
       >
         <Icon name="mdi:phone" width="24" />
       </a>
