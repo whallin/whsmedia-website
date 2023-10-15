@@ -6,10 +6,11 @@ interface Props {
   link: string;
   target: string;
   icon: string;
+  showIcon: "true" | "false";
   text: string;
 }
 
-const { style, link, target, icon, text } = Astro.props;
+const { style, link, target, icon, showIcon, text } = Astro.props;
 ---
 
 <div class="w-full sm:w-fit">
@@ -26,7 +27,14 @@ const { style, link, target, icon, text } = Astro.props;
     aria-label={text}
     rel="prefetch"
   >
-    <Icon name={icon} width="24" />
+    <Icon
+      name={icon}
+      width="24"
+      class:list={[
+        showIcon === "false" && "hidden",
+        showIcon === "true" && "block",
+      ]}
+    />
     {text}
   </a>
 </div>
