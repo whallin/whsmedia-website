@@ -1,0 +1,38 @@
+---
+import Icon from "astro-icon";
+import { Image } from "astro:assets";
+const { avatar, name, title, email, phone, description } = Astro.props;
+---
+
+<div class="flex flex-col gap-5 lg:items-center">
+  <Image
+    src={avatar}
+    width="128"
+    height="128"
+    alt=""
+    class="select-none rounded-full border-2 border-whs-primary transition duration-200 hover:shadow-lg"
+  />
+  <div class="flex flex-col gap-2.5 lg:items-center lg:text-center">
+    <div class="flex flex-col">
+      <b class="text-stone-900">{name}</b>
+      <p class="text-whs-primary">{title}</p>
+    </div>
+    <div class="flex gap-5 text-whs-primary">
+      <a
+        href=`mailto:${email}`
+        target="_blank"
+        class="transition duration-200 hover:opacity-50"
+      >
+        <Icon name="mdi:email" width="24" />
+      </a>
+      <a
+        href=`tel:${phone}`
+        target="_blank"
+        class="transition duration-200 hover:opacity-50"
+      >
+        <Icon name="mdi:phone" width="24" />
+      </a>
+    </div>
+    <p class="text-stone-900">{description}</p>
+  </div>
+</div>

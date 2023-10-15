@@ -1,0 +1,58 @@
+---
+import Button from "../Button.astro";
+import ServiceCard from "../ServiceCard.astro";
+---
+
+<div class="flex justify-center px-8 py-32" id="tjänster">
+  <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-5">
+      <div class="flex max-w-2xl flex-col gap-2.5 text-stone-900">
+        <h2 class="text-3xl">
+          Vad erbjuder <span class="font-bold">WHS Media?</span>
+        </h2>
+        <p>
+          Vi på WHS Media är redo att hjälpa dig och din organisation med vad du
+          än behöver inom mediaproduktion. Våran fullständiga lista på tjänster
+          vi erbjuder hittar ni nedan.
+        </p>
+      </div>
+      <div class="flex flex-col gap-5 sm:flex-row">
+        <Button
+          style="solid"
+          link="#kontakt"
+          target=""
+          icon="mdi:hand-wave"
+          text="Kontakta oss ->"
+        />
+      </div>
+    </div>
+    <div class="flex max-w-2xl flex-col gap-10 md:flex-row md:justify-between">
+      <ServiceCard
+        icon="mdi:home"
+        name="Service name"
+        price="300"
+        description="En kort och sött beskrivning om tjänsten och dess fördelar. Men det kanske ska få vara lite längre ändå?"
+      />
+      <ServiceCard
+        icon="mdi:home"
+        name="Service name"
+        price="300"
+        description="En kort och sött beskrivning om tjänsten och dess fördelar. Men det kanske ska få vara lite längre ändå?"
+      />
+    </div>
+    <div class="flex max-w-2xl flex-col gap-10 md:flex-row md:justify-between">
+      <ServiceCard
+        icon="mdi:home"
+        name="Service name"
+        price="300"
+        description="En kort och sött beskrivning om tjänsten och dess fördelar. Men det kanske ska få vara lite längre ändå?"
+      />
+      <ServiceCard
+        icon="mdi:home"
+        name="Service name"
+        price="300"
+        description="En kort och sött beskrivning om tjänsten och dess fördelar. Men det kanske ska få vara lite längre ändå?"
+      />
+    </div>
+  </div>
+</div>

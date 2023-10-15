@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import FooterLogomarkImg from "../img/footer-logomark.svg";
+import Button from "../components/Button.astro";
+
+import DefaultLayout from "../layouts/Default.astro";
+---
+
+<DefaultLayout>
+  <div class="flex justify-center px-8 py-16" id="tjänster">
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-10">
+        <Button
+          style="solid"
+          link="/"
+          target=""
+          icon="mdi:home"
+          text="Tillbaka ->"
+        />
+        <div class="flex max-w-2xl flex-col gap-10 text-stone-900">
+          <h1 class="text-4xl">
+            WHS Media är ett <span class="font-bold">UF-företag</span>
+          </h1>
+          <p>
+            Förklara kort vad ett UF-företag är, och vad det innebär att vara
+            ett UF-företag. Förklara även hur avtal, leverans av produkt/tjänst,
+            och betalning av fakturor fungerar för ett UF-företag.
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 sm:flex-row">
+          <Button
+            style="solid"
+            link="/#kontakt"
+            target=""
+            icon="mdi:hand-wave"
+            text="Kontakta oss ->"
+          />
+          <Button
+            style="outline-invert"
+            link="https://ungforetagsamhet.se/"
+            target="_blank"
+            icon="mdi:heart"
+            text="Ung Företagsamhet ->"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

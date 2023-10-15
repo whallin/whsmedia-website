@@ -1,9 +1,0 @@
-/* TEAM */
-Developer & designer: William Hallin
-Site: https://hallin.media
-Location: Skellefteå, Sweden
-
-/* SITE */
-Standards: Astro, JavaScript
-Components: Tailwind
-Software: Polypane

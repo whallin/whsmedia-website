@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+---
+
+<div class="flex justify-center px-8 py-32" id="kontakt">
+  <div class="flex flex-col gap-10">
+    <Image
+      src="https://placehold.co/512x256/FF3A3A/fafaf9"
+      width="512"
+      height="256"
+      alt=""
+      class="w-full select-none rounded-xl grayscale transition duration-200 hover:shadow-xl hover:grayscale-0"
+    />
+    <div class="flex flex-col gap-10 pt-2">
+      <div class="flex max-w-2xl flex-col gap-2.5 text-stone-900">
+        <h2 class="text-3xl">
+          Kontakta <span class="font-bold">WHS Media</span>
+        </h2>
+        <p>
+          Vi finns tillgängliga via flera olika platformar och är redo att svara
+          under vanliga arbetstider nästan varje dag. Välj den platform nedan du
+          föredrar.<br /><br />Vi försöker svara inom 1-2 arbetsdagar och finns
+          tillgängliga mellan 12-18 på vardagar.
+        </p>
+      </div>
+      <div class="flex flex-col gap-5 sm:flex-row">
+        <Button
+          style="solid"
+          link="mailto:kontakt@whsmedia.se"
+          target="_blank"
+          icon="mdi:email"
+          text="E-post ->"
+        />
+        <Button
+          style="outline-invert"
+          link="https://instagram.com/whsmedia.se"
+          target="_blank"
+          icon="simple-icons:instagram"
+          text="Instagram ->"
+        />
+        <Button
+          style="outline-invert"
+          link="https://linkedin.com/company/whsmedia/"
+          target="_blank"
+          icon="simple-icons:linkedin"
+          text="LinkedIn ->"
+        />
+      </div>
+    </div>
+  </div>
+</div>

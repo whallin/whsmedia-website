@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  style: "solid" | "outline" | "outline-invert";
+  link: string;
+  target: string;
+  icon: string;
+  text: string;
+}
+
+const { style, link, target, icon, text } = Astro.props;
+---
+
+<a href={link} target={target} class="w-full sm:w-fit">
+  <button
+    class:list={[
+      "flex h-12 w-full items-center justify-center gap-2.5 px-6 font-bold transition duration-200 hover:opacity-50 sm:w-fit",
+      style === "solid" && "bg-whs-primary text-stone-50",
+      style === "outline" && "border-2 border-whs-primary text-stone-50",
+      style === "outline-invert" &&
+        "border-2 border-whs-primary text-stone-900",
+    ]}
+  >
+    <Icon name={icon} width="24" />
+    {text}
+  </button>
+</a>
