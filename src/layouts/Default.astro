@@ -1,11 +1,23 @@
 ---
 import SiteHead from "../components/SiteHead.astro";
 import Footer from "../components/Footer.astro";
+
+const { title, description } = Astro.props;
 ---
 
 <html lang="sv">
   <head>
     <SiteHead />
+    <!-- Basic SEO -->
+    <title>{title} - WHS Media</title>
+    <meta name="description" content={description} />
+    <meta itemprop="name" content=`${title} - WHS Media` />
+    <meta itemprop="description" content={description} />
+    <meta property="og:title" content=`${title} - WHS Media` />
+    <meta property="og:description" content={description} />
+    <meta property="twitter:title" content=`${title} - WHS Media` />
+    <meta property="twitter:description" content={description} />
+    <meta property="og:locale" content="sv_SE" />
     <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
       {

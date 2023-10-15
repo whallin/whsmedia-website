@@ -7,41 +7,51 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
 <footer class="flex justify-center px-8 py-32" id="footer">
   <div class="flex flex-col items-center gap-10 xl:flex-row xl:gap-24">
     <div
-      class="flex flex-col items-center gap-5 text-stone-900 lg:flex-row lg:gap-10"
+      class="flex flex-col items-center gap-5 text-stone-500 lg:flex-row lg:gap-10"
     >
       <Image src={ImgFooterLogomark} alt="Logo" class="select-none" />
       <p class="text-center lg:text-left">
-        <span class="font-bold opacity-50">WHS Media UF</span>
-        <span class="opacity-50">
-          (012821-1067)<br />Vi är ett UF-företag!
-        </span>
+        <span class="font-bold">WHS Media UF</span>
+         (012821-1067)<br />Vi är ett UF-företag!
         <a
           href="/uf"
-          class="font-bold text-whs-primary underline decoration-2 underline-offset-2 opacity-50 transition duration-200 hover:opacity-100"
+          class="font-bold text-whs-primary underline decoration-2 underline-offset-2 opacity-100 transition duration-200 hover:opacity-50"
           >Läs mer -></a
         >
       </p>
     </div>
     <div class="flex gap-5">
-      <a href="mailto:kontakt@whsmedia.se" target="_blank">
+      <a
+        href="mailto:kontakt@whsmedia.se"
+        target="_blank"
+        aria-label="WHS Media via e-post"
+      >
         <Icon
           name="mdi:email"
           width="24"
-          class="text-stone-900 opacity-50 transition duration-200 hover:text-whs-primary hover:opacity-100"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
         />
       </a>
-      <a href="https://instagram.com/whsmedia.se" target="_blank">
+      <a
+        href="https://instagram.com/whsmedia.se"
+        target="_blank"
+        aria-label="WHS Media via Instagram"
+      >
         <Icon
           name="simple-icons:instagram"
           width="24"
-          class="text-stone-900 opacity-50 transition duration-200 hover:text-whs-primary hover:opacity-100"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
         />
       </a>
-      <a href="https://linkedin.com/company/whsmedia/" target="_blank">
+      <a
+        href="https://linkedin.com/company/whsmedia/"
+        target="_blank"
+        aria-label="WHS Media via LinkedIn"
+      >
         <Icon
           name="simple-icons:linkedin"
           width="24"
-          class="text-stone-900 opacity-50 transition duration-200 hover:text-whs-primary hover:opacity-100"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
         />
       </a>
     </div>

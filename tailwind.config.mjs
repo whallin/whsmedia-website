@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         whs: {
-          primary: "#FF3A3A",
+          primary: "#E60000",
         },
       },
     },

@@ -22,6 +22,7 @@ const { avatar, name, title, email, phone, description } = Astro.props;
         href=`mailto:${email}`
         target="_blank"
         class="transition duration-200 hover:opacity-50"
+        aria-label=`Skicka ett mejl till ${email}`
       >
         <Icon name="mdi:email" width="24" />
       </a>
@@ -29,6 +30,7 @@ const { avatar, name, title, email, phone, description } = Astro.props;
         href=`tel:${phone}`
         target="_blank"
         class="transition duration-200 hover:opacity-50"
+        aria-label=`Ring ${email}`
       >
         <Icon name="mdi:phone" width="24" />
       </a>
