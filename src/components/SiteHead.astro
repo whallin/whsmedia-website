@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 ---
 
@@ -43,8 +43,16 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 <meta name="msapplication-TileColor" content="#FF3A3A" />
 <meta name="theme-color" content="#FF3A3A" />
 
+<!-- Fonts
+<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" /> -->
+
 <!-- Fonts -->
-<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- Analytics
 <script
