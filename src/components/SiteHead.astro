@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 ---
 
 <meta charset="utf-8" />
@@ -43,11 +44,7 @@ import { ViewTransitions } from 'astro:transitions';
 <meta name="theme-color" content="#FF3A3A" />
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.bunny.net" />
-<link
-  href="https://fonts.bunny.net/css?family=inter:400,700"
-  rel="stylesheet"
-/>
+<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
 
 <!-- Analytics
 <script
