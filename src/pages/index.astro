@@ -16,7 +16,7 @@ import SectionContact from "../components/section/Contact.astro";
   title="Hem"
   description="WHS Media är ett UF-företag från Skellefteå, Västerbotten som jobbar med professionell live- och medieproduktion till ett rimligt pris."
 >
-  <div
+  <main
     class="flex h-screen flex-col justify-center gap-10 bg-landing bg-cover bg-center px-8 lg:items-center"
     id="hero"
   >
@@ -35,19 +35,19 @@ import SectionContact from "../components/section/Contact.astro";
       <Button
         style="solid"
         link="#tjänster"
-        target=""
+        target="_self"
         icon="mdi:clipboard-text"
         text="Se tjänster ->"
       />
       <Button
         style="outline"
         link="#kontakt"
-        target=""
+        target="_self"
         icon="mdi:hand-wave"
         text="Kontakta oss ->"
       />
     </div>
-  </div>
+  </main>
   <ClientBar />
   <SectionServices />
   <SectionConsult />
