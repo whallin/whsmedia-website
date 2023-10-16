@@ -8,14 +8,12 @@ import AboutMemberCard from "../AboutMemberCard.astro";
       <h2 class="text-3xl">
         Vilka är <span class="font-bold">WHS Media?</span>
       </h2>
-      <p>
-        En mindre text som ovan där vi lätt berättar om vilka WHS Media är och
-        våran historia samt motivation för varför vi driver företaget.
-      </p>
+      <p>Text</p>
     </div>
     <div class="flex max-w-2xl flex-col gap-10 md:flex-row md:justify-between">
       <AboutMemberCard
         avatar="https://placehold.co/256x256/171717/404040"
+        services={["live", "video", "design"]}
         name="William Hallin"
         title="Design & IT-ansvarig"
         email="william@whsmedia.se"
@@ -24,6 +22,7 @@ import AboutMemberCard from "../AboutMemberCard.astro";
       />
       <AboutMemberCard
         avatar="https://placehold.co/256x256/171717/404040"
+        services={["live", "video", "photo"]}
         name="Hampus Lundmark"
         title="Logistikanvarig"
         email="hampus@whsmedia.se"
@@ -32,6 +31,7 @@ import AboutMemberCard from "../AboutMemberCard.astro";
       />
       <AboutMemberCard
         avatar="https://placehold.co/256x256/171717/404040"
+        services={["live", "video", "photo"]}
         name="Sigge Johansson"
         title="Säljansvarig"
         email="sigge@whsmedia.se"
