@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["Inter", defaultTheme.fontFamily.sans],
       },
+      brightness: {
+        25: ".25",
+      },
       colors: {
         whs: {
           primary: "#E60000",
