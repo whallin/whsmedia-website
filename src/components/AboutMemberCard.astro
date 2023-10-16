@@ -13,6 +13,12 @@ const { avatar, name, title, email, phone, description } = Astro.props;
     class="select-none rounded-full border-2 border-whs-primary transition duration-200 hover:shadow-lg"
   />
   <div class="flex flex-col gap-2.5 lg:items-center lg:text-center">
+    <div class="flex gap-2.5 text-whs-primary">
+      <Icon name="mdi:broadcast" width="16" title="Jobbar med Liveproduktion" />
+      <Icon name="mdi:camera" width="16" title="Jobbar med Fotografering" />
+      <Icon name="mdi:video" width="16" title="Jobbar med Videoproduktion" />
+      <Icon name="mdi:palette" width="16" title="Jobbar med Grafisk design" />
+    </div>
     <div class="flex flex-col">
       <b class="text-stone-900">{name}</b>
       <p class="text-whs-primary">{title}</p>

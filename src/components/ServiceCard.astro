@@ -1,6 +1,6 @@
 ---
 import Icon from "astro-icon";
-const { icon, name, price, description } = Astro.props;
+const { icon, name, price, priceb2b, description } = Astro.props;
 ---
 
 <div class="flex flex-col gap-2.5">
@@ -8,6 +8,8 @@ const { icon, name, price, description } = Astro.props;
     <Icon name={icon} width="32" />
     <h3 class="text-2xl font-bold">{name}</h3>
   </div>
-  <i class="text-stone-500">Pris från {price} SEK</i>
+  <i class="text-stone-500">
+    Pris för <span class="underline decoration-2 underline-offset-2">privatkund</span>: {price} SEK<br><span class="underline decoration-2 underline-offset-2">Företagspris</span>: {priceb2b} SEK
+  </i>
   <p class="text-stone-900">{description}</p>
 </div>
