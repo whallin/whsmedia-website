@@ -1,23 +1,30 @@
 ---
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
+import ImgGrupp3 from "../../img/team/grupp-3.png";
 ---
 
 <div class="flex justify-center px-8 py-32" id="kontakt">
-  <div class="flex flex-col gap-10">
+  <div class="flex flex-col gap-16">
     <Image
-      src="https://placehold.co/670x350/FF3A3A/fafaf9"
+      src={ImgGrupp3}
       width="670"
       height="350"
-      alt=""
-      class="w-full select-none rounded-xl grayscale transition duration-200 hover:shadow-xl hover:grayscale-0"
+      alt="Bild på WHS Media-gruppen"
+      class="w-full select-none rounded-xl shadow-xl grayscale transition duration-200 hover:grayscale-0"
     />
     <div class="flex flex-col gap-10 pt-2">
       <div class="flex max-w-2xl flex-col gap-2.5 text-stone-900">
         <h2 class="text-3xl">
           Kontakta <span class="font-bold">WHS Media</span>
         </h2>
-        <p>Text</p>
+        <p>
+          Kontakta oss för att diskutera ditt projekt och ta del av våra
+          professionella mediatjänster. Skicka ditt ärende via någon av det
+          följande plattformarna. Vi stävar efter att besvara alla ärenden inom
+          1-2 arbetsdagar.<br /><br />Vi ser fram emot att höra från dig och
+          hjälpa till att förverkliga dina mediebehov!
+        </p>
       </div>
       <div class="flex flex-col gap-5 sm:flex-row">
         <Button
