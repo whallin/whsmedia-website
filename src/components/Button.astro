@@ -18,7 +18,7 @@ const { style, link, target, icon, showIcon, text } = Astro.props;
     href={link}
     target={target}
     class:list={[
-      "flex h-12 w-full items-center justify-center gap-2.5 px-6 font-bold transition duration-200 hover:opacity-50 sm:w-fit",
+      "flex h-12 w-full items-center justify-center gap-2.5 px-6 font-bold transition duration-200 hover:opacity-50 sm:w-fit select-none",
       style === "solid" && "bg-whs-primary text-stone-50",
       style === "outline" && "border-2 border-whs-primary text-stone-50",
       style === "outline-invert" &&
