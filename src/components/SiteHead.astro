@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 ---
 
@@ -44,14 +44,15 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 <meta name="theme-color" content="#FF3A3A" />
 
 <!-- Fonts -->
-<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+<GoogleFontsOptimizer
+  url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+/>
 
-<!-- Analytics
+<!-- Analytics -->
 <script
   type="text/partytown"
   src=`${import.meta.env.PUBLIC_UMAMI_URL}`
   data-website-id=`${import.meta.env.PUBLIC_UMAMI_ID}`></script>
--->
 
 <!-- Transitions -->
 <ViewTransitions />
