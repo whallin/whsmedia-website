@@ -26,6 +26,7 @@ const { style, link, target, icon, showIcon, text } = Astro.props;
     ]}
     aria-label={text}
     rel="prefetch"
+    data-umami-event=`Button (${Astro.url.pathname}): ${text} (${link})`
   >
     <Icon
       name={icon}

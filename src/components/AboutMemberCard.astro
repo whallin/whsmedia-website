@@ -62,6 +62,7 @@ const { avatar, services, name, title, email, phone, description } =
         class="transition duration-200 hover:opacity-50"
         aria-label=`Skicka ett mejl till ${email}`
         rel="prefetch"
+        data-umami-event=`Member Card (${name}): ${email}`
       >
         <Icon name="mdi:email" width="24" />
       </a>
@@ -69,8 +70,9 @@ const { avatar, services, name, title, email, phone, description } =
         href=`tel:${phone}`
         target="_blank"
         class="transition duration-200 hover:opacity-50"
-        aria-label=`Ring ${email}`
+        aria-label=`Ring ${phone}`
         rel="prefetch"
+        data-umami-event=`Member Card (${name}): ${phone}`
       >
         <Icon name="mdi:phone" width="24" />
       </a>

@@ -16,7 +16,8 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
         <a
           href="/uf"
           class="font-bold text-whs-primary underline decoration-2 underline-offset-2 opacity-100 transition duration-200 hover:opacity-50"
-          rel="prefetch">Läs mer -></a
+          rel="prefetch"
+          data-umami-event=`Footer (${Astro.url.pathname}): /uf`>Läs mer -></a
         >
       </p>
     </div>
@@ -25,6 +26,7 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
         href="mailto:kontakt@whsmedia.se"
         target="_blank"
         aria-label="WHS Media via e-post"
+        data-umami-event=`Footer (${Astro.url.pathname}): Email`
       >
         <Icon
           name="mdi:email"
@@ -37,6 +39,7 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
         target="_blank"
         aria-label="WHS Media via Instagram"
         rel="prefetch"
+        data-umami-event=`Footer (${Astro.url.pathname}): Instagram`
       >
         <Icon
           name="simple-icons:instagram"
@@ -49,6 +52,7 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
         target="_blank"
         aria-label="WHS Media via LinkedIn"
         rel="prefetch"
+        data-umami-event=`Footer (${Astro.url.pathname}): LinkedIn`
       >
         <Icon
           name="simple-icons:linkedin"
