@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Icon from "astro-icon";
 import ImgFooterLogomark from "../img/footer-logomark.svg";
 ---
@@ -9,7 +9,7 @@ import ImgFooterLogomark from "../img/footer-logomark.svg";
     <div
       class="flex flex-col items-center gap-5 text-stone-500 lg:flex-row lg:gap-10"
     >
-      <Image src={ImgFooterLogomark} alt="Logo" class="select-none" />
+      <Picture src={ImgFooterLogomark} alt="Logo" class="select-none" formats={['avif', 'webp']} />
       <p class="text-center lg:text-left">
         <span class="font-bold">WHS Media UF</span>
          (06012821-1067)<br />Vi är ett UF-företag!
