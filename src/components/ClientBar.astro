@@ -1,10 +1,27 @@
 ---
 import { Picture } from "astro:assets";
+
+import imgLastbilsstation from "../img/clients/lastbilsstation.svg"
 ---
 
 <div class="flex justify-center px-8 py-32" id="kunder">
   <div class="flex max-w-2xl select-none flex-col gap-5 md:flex-row md:gap-10">
     <a
+      href="https://www.lastbilsstation.se/index.html"
+      target="_blank"
+      class="grayscale transition duration-200 hover:grayscale-0"
+      aria-label="Besök Lastbilsstationens hemsida"
+      rel="prefetch"
+    > 
+      <Picture
+        src={imgLastbilsstation}
+        width="128"
+        height="64"
+        alt=""
+        formats={['avif', 'webp']}
+      />
+    </a>
+    <!--<a
       href="#"
       target="_blank"
       class="grayscale transition duration-200 hover:grayscale-0"
@@ -48,21 +65,6 @@ import { Picture } from "astro:assets";
         alt=""
         formats={['avif', 'webp']}
       />
-    </a>
-    <a
-      href="#"
-      target="_blank"
-      class="grayscale transition duration-200 hover:grayscale-0"
-      aria-label="Besök kundens hemsida"
-      rel="prefetch"
-    >
-      <Picture
-        src="https://placehold.co/256x128/171717/404040"
-        width="128"
-        height="64"
-        alt=""
-        formats={['avif', 'webp']}
-      />
-    </a>
+    </a>-->
   </div>
 </div>

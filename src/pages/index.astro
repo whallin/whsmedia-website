@@ -1,6 +1,7 @@
 ---
-import { Picture } from "astro:assets";
+import { Picture, getImage } from "astro:assets";
 import LandingLogomarkImg from "../img/landing-logomark.svg";
+import LandingBackgroundImg from "../img/landingbg.jpg";
 
 import DefaultLayout from "../layouts/Default.astro";
 
@@ -10,6 +11,8 @@ import SectionServices from "../components/section/Services.astro";
 import SectionConsult from "../components/section/Consult.astro";
 import SectionAbout from "../components/section/About.astro";
 import SectionContact from "../components/section/Contact.astro";
+
+const LandingBackgroundImgOpti = await getImage({src: LandingBackgroundImg});
 ---
 
 <DefaultLayout
@@ -17,7 +20,8 @@ import SectionContact from "../components/section/Contact.astro";
   description="WHS Media är ett UF-företag från Skellefteå, Västerbotten som jobbar med professionell live- och medieproduktion till ett rimligt pris."
 >
   <main class="relative w-full" id="hero">
-    <iframe
+    <div class="-z-20 bg-cover bg-center brightness-25 w-full h-screen" style={`background-image: url(${LandingBackgroundImgOpti.src});`}></div>
+    <!--<iframe
       title="WHS Media showreel"
       width="1280"
       height="720"
@@ -25,7 +29,7 @@ import SectionContact from "../components/section/Contact.astro";
       class="relative -z-10 h-screen w-full select-none bg-black brightness-25"
       src="https://www.youtube-nocookie.com/embed/b3z5_q6lJ5c?playlist=b3z5_q6lJ5c&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&mute=1&autoplay=1"
     >
-    </iframe>
+    </iframe>-->
     <div class="absolute top-0 z-10 flex h-full w-full flex-col justify-center">
       <div class="flex flex-col justify-center gap-10 px-8 lg:items-center">
         <Picture
@@ -69,6 +73,7 @@ import SectionContact from "../components/section/Contact.astro";
       </div>
     </div>
   </main>
+  <!--<ClientBar />-->
   <SectionServices />
   <SectionConsult />
   <SectionAbout />
