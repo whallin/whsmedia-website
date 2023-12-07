@@ -20,8 +20,8 @@ const LandingBackgroundImgOpti = await getImage({src: LandingBackgroundImg});
   description="WHS Media är ett UF-företag från Skellefteå, Västerbotten som jobbar med professionell live- och medieproduktion till ett rimligt pris."
 >
   <main class="relative w-full" id="hero">
-    <!--<div class="-z-20 bg-cover bg-center brightness-25 w-full h-screen" style={`background-image: url(${LandingBackgroundImgOpti.src});`}></div>-->
-    <iframe
+    <div class="-z-20 bg-cover bg-center brightness-25 w-full h-screen" style={`background-image: url(${LandingBackgroundImgOpti.src});`}></div>
+    <!--<iframe
       title="WHS Media showreel"
       width="1280"
       height="720"
@@ -29,7 +29,7 @@ const LandingBackgroundImgOpti = await getImage({src: LandingBackgroundImg});
       class="relative -z-10 h-screen w-full select-none bg-black brightness-25"
       src="https://www.youtube-nocookie.com/embed/b3z5_q6lJ5c?playlist=b3z5_q6lJ5c&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&mute=1&autoplay=1"
     >
-    </iframe>
+    </iframe>-->
     <div class="absolute top-0 z-10 flex h-full w-full flex-col justify-center">
       <div class="flex flex-col justify-center gap-10 px-8 lg:items-center">
         <Picture
@@ -73,7 +73,7 @@ const LandingBackgroundImgOpti = await getImage({src: LandingBackgroundImg});
       </div>
     </div>
   </main>
-  <!--<ClientBar />-->
+  <ClientBar />
   <SectionServices />
   <SectionConsult />
   <SectionAbout />
