@@ -1,0 +1,67 @@
+---
+import Button from "../Button.astro";
+import ServiceCard from "../ServiceCard.astro";
+---
+
+<div class="flex justify-center px-8 py-32" id="tjänster">
+  <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-5">
+      <div class="flex max-w-2xl flex-col gap-2.5 text-stone-900">
+        <h2 class="text-3xl">
+          Vad erbjuder <span class="font-bold">WHS Media?</span>
+        </h2>
+        <p>
+          Upplev WHS Medias innovativa kreativa tjänster inom mediaproduktion.
+          Läs nedan och upptäck hur vi kan hjälpa dig att skapa minnesvärda och
+          engagerande visuella berättelser.<br /><br /><b
+            >Vi tar en timavgift på 200kr/timme för live- och video
+            produktioner.</b
+          > Men vi lovar att ge dig en tydlig uppskattning av priset innan vi
+          påbörjar arbetet!
+        </p>
+      </div>
+      <div class="flex flex-col gap-5 sm:flex-row">
+        <Button
+          style="solid"
+          link="#kontakt"
+          target="_self"
+          icon="mdi:hand-wave"
+          showIcon="true"
+          text="Kontakta oss ->"
+        />
+      </div>
+    </div>
+    <div class="flex max-w-2xl flex-col gap-10 md:flex-row md:justify-between">
+      <ServiceCard
+        icon="mdi:broadcast"
+        name="Liveproduktion"
+        price="250"
+        priceb2b="450"
+        description="En professionell liveproduktionstjänst som hjälper dig att fånga ditt event i realtid på ett imponerande sätt."
+      />
+      <ServiceCard
+        icon="mdi:camera"
+        name="Fotografering"
+        price="250"
+        priceb2b="450"
+        description="En professionell fotograferingstjänst för evenemang & marknadsföring där vi skapar bilder med en historia."
+      />
+    </div>
+    <div class="flex max-w-2xl flex-col gap-10 md:flex-row md:justify-between">
+      <ServiceCard
+        icon="mdi:video"
+        name="Videoproduktion"
+        price="250"
+        priceb2b="450"
+        description="Med kreativa videoproduktioner hjälper vi dig att berätta din unika histora och sprida ditt budskap."
+      />
+      <ServiceCard
+        icon="mdi:palette"
+        name="Grafisk design"
+        price="250"
+        priceb2b="450"
+        description="Vi arbetar nära dig för att skapa grafiska element som speglar din identitet och ditt budskap."
+      />
+    </div>
+  </div>
+</div>

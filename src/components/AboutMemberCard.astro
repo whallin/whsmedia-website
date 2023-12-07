@@ -1,0 +1,83 @@
+---
+import Icon from "astro-icon";
+import { Picture } from "astro:assets";
+
+interface Props {
+  avatar: string;
+  services: Array<"photo" | "live" | "video" | "design">;
+  name: string;
+  title: string;
+  email: string;
+  phone: string;
+  description: string;
+}
+
+const { avatar, services, name, title, email, phone, description } =
+  Astro.props;
+---
+
+<div class="flex lg:w-48 flex-col gap-5 lg:items-center">
+  <Picture
+    src={avatar}
+    width="256"
+    height="256"
+    alt=`Bild på ${name}`
+    formats={['avif', 'webp']}
+    class="w-32 select-none rounded-full border-2 border-whs-primary transition duration-200 hover:shadow-lg"
+  />
+  <div class="flex flex-col gap-2.5 lg:items-center lg:text-center">
+    <div class="flex gap-2.5 text-whs-primary">
+      <Icon
+        name="mdi:broadcast"
+        width="16"
+        title="Jobbar med Liveproduktion"
+        class:list={[!services.includes("live") && "hidden"]}
+      />
+      <Icon
+        name="mdi:camera"
+        width="16"
+        title="Jobbar med Fotografering"
+        class:list={[!services.includes("photo") && "hidden"]}
+      />
+      <Icon
+        name="mdi:video"
+        width="16"
+        title="Jobbar med Videoproduktion"
+        class:list={[!services.includes("video") && "hidden"]}
+      />
+      <Icon
+        name="mdi:palette"
+        width="16"
+        title="Jobbar med Grafisk design"
+        class:list={[!services.includes("design") && "hidden"]}
+      />
+    </div>
+    <div class="flex flex-col">
+      <b class="text-stone-900">{name}</b>
+      <p class="text-whs-primary">{title}</p>
+    </div>
+    <div class="flex gap-5 text-whs-primary">
+      <a
+        href=`mailto:${email}`
+        target="_blank"
+        class="transition duration-200 hover:opacity-50"
+        aria-label=`Skicka ett mejl till ${email}`
+        rel="prefetch"
+        data-umami-event=`Member Card (${name}): ${email}`
+      >
+        <Icon name="mdi:email" width="24" />
+      </a>
+      <a
+        href=`tel:${phone}`
+        target="_blank"
+        class="transition duration-200 hover:opacity-50"
+        aria-label=`Ring ${phone}`
+        rel="prefetch"
+        data-umami-event=`Member Card (${name}): ${phone}`
+      >
+        <Icon name="mdi:phone" width="24" />
+      </a>
+    </div>
+    <p class="text-stone-900">{description}</p>
+  </div>
+</div>

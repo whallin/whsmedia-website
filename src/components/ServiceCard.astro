@@ -1,0 +1,19 @@
+---
+import Icon from "astro-icon";
+const { icon, name, price, priceb2b, description } = Astro.props;
+---
+
+<div class="flex max-w-xs flex-col gap-2.5">
+  <div class="flex items-center gap-2.5 text-whs-primary">
+    <Icon name={icon} width="32" />
+    <h3 class="text-2xl font-bold">{name}</h3>
+  </div>
+  <i class="text-stone-500">
+    Pris för <span class="underline decoration-2 underline-offset-2"
+      >privatkund</span
+    > från: {price} SEK<br /><span class="underline decoration-2 underline-offset-2"
+      >Företagspris</span
+    > från: {priceb2b} SEK
+  </i>
+  <p class="text-stone-900">{description}</p>
+</div>

@@ -1,27 +1,68 @@
 ---
-interface Props {
-	title: string;
-}
+import SiteHead from "../components/SiteHead.astro";
+import Footer from "../components/Footer.astro";
 
-const { title } = Astro.props;
-
-import SiteHead from '../components/SiteHead.astro';
+const { title, description } = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="sv">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>{title} - WHS Media</title>
-		<meta property="og:title" content=`${title} - WHS Media` />
-		<meta property="twitter:title" content=`${title} - WHS Media` />
-		<meta name="author" content="WHS Media" />
-		<SiteHead />
-	</head>
-	<body>
-		<main>
-			<slot />
-		</main>
-	</body>
+  <head>
+    <SiteHead />
+    <!-- Basic SEO -->
+    <title>{title} - WHS Media</title>
+    <meta name="description" content={description} />
+    <meta itemprop="name" content=`${title} - WHS Media` />
+    <meta itemprop="description" content={description} />
+    <meta property="og:title" content=`${title} - WHS Media` />
+    <meta property="og:description" content={description} />
+    <meta property="twitter:title" content=`${title} - WHS Media` />
+    <meta property="twitter:description" content={description} />
+    <meta property="og:locale" content="sv_SE" />
+    <!-- Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "WHS Media UF",
+        "image": "https://whsmedia.se/footer-logomark.svg",
+        "url": "https://whsmedia.se",
+        "priceRange": "100-500 SEK",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gymansievägen 7",
+          "addressLocality": "Skellefteå",
+          "postalCode": "93157",
+          "addressCountry": "SE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 64.7405186,
+          "longitude": 20.9680263
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://whsmedia.se",
+          "https://instagram.com/whsmedia.se",
+          "https://linkedin.com/company/whsmedia/"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-stone-50 selection:bg-red-700 selection:text-stone-50">
+    <slot />
+    <Footer />
+  </body>
 </html>

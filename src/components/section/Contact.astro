@@ -1,0 +1,58 @@
+---
+import { Picture } from "astro:assets";
+import Button from "../Button.astro";
+import ImgGrupp3 from "../../img/team/grupp-3.png";
+---
+
+<div class="flex justify-center px-8 py-32" id="kontakt">
+  <div class="flex flex-col gap-16">
+    <Picture
+      src={ImgGrupp3}
+      width="1340"
+      height="700"
+      formats={['avif', 'webp']}
+      alt="Bild på WHS Media-gruppen"
+      class="w-full max-w-2xl select-none rounded-xl shadow-xl"
+    />
+    <div class="flex flex-col gap-10 pt-2 items-center text-center">
+      <div class="flex max-w-2xl flex-col gap-2.5 text-stone-900">
+        <h2 class="text-3xl">
+          Kontakta <span class="font-bold">WHS Media</span>
+        </h2>
+        <p>
+          Kontakta oss för att diskutera ditt projekt och ta del av våra
+          professionella mediatjänster. Skicka ditt ärende via någon av det
+          följande plattformarna. Vi stävar efter att besvara alla ärenden inom
+          1-2 arbetsdagar.<br /><br />Vi ser fram emot att höra från dig och
+          hjälpa till att förverkliga dina mediebehov!
+        </p>
+      </div>
+      <div class="flex flex-col gap-5 sm:flex-row">
+        <Button
+          style="solid"
+          link="mailto:kontakt@whsmedia.se"
+          target="_blank"
+          icon="mdi:email"
+          showIcon="true"
+          text="E-post ->"
+        />
+        <Button
+          style="outline-invert"
+          link="https://instagram.com/whsmedia.se"
+          target="_blank"
+          icon="simple-icons:instagram"
+          showIcon="true"
+          text="Instagram ->"
+        />
+        <Button
+          style="outline-invert"
+          link="https://linkedin.com/company/whsmedia/"
+          target="_blank"
+          icon="simple-icons:linkedin"
+          showIcon="true"
+          text="LinkedIn ->"
+        />
+      </div>
+    </div>
+  </div>
+</div>

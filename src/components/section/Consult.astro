@@ -1,0 +1,30 @@
+---
+import Button from "../Button.astro";
+---
+
+<div class="flex justify-center px-8 py-32" id="konsult">
+  <div class="flex flex-col items-center gap-5">
+    <div class="flex max-w-2xl flex-col gap-2.5 text-center text-stone-900">
+      <h2 class="text-3xl">
+        Osäker på vad <span class="font-bold">du</span> behöver?
+      </h2>
+      <p>
+        Boka en <b>gratis 30-minuters konsultation</b> och upptäck hur WHS Media
+        kan hjälpa dig. Vi lyssnar på dina behov och hjälper dig att välja rätt
+        tjänster för att ta ditt evenemang eller mediainnehåll till nästa nivå.<br
+        /><br />Detta är det perfekta ögonblicket att ställa dina frågor och få
+        förståelse för hur vi kan hjälpa dig.
+      </p>
+    </div>
+    <div class="flex w-full flex-col gap-5 sm:w-fit sm:flex-row">
+      <Button
+        style="solid"
+        link="https://cal.com/whsmedia"
+        target="_blank"
+        icon="mdi:calendar-check"
+        showIcon="true"
+        text="Boka ett möte ->"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+import { Picture } from "astro:assets";
+import Icon from "astro-icon";
+import ImgFooterLogomark from "../img/footer-logomark.svg";
+---
+
+<footer class="flex justify-center px-8 py-32" id="footer">
+  <div class="flex flex-col items-center gap-10 xl:flex-row xl:gap-24">
+    <div
+      class="flex flex-col items-center gap-5 text-stone-500 lg:flex-row lg:gap-10"
+    >
+      <Picture src={ImgFooterLogomark} alt="Logo" class="select-none" formats={['avif', 'webp']} />
+      <p class="text-center lg:text-left">
+        <span class="font-bold">WHS Media UF</span>
+         (012821-1067)<br />Vi är ett UF-företag!
+        <a
+          href="/uf"
+          class="font-bold text-whs-primary underline decoration-2 underline-offset-2 opacity-100 transition duration-200 hover:opacity-50"
+          rel="prefetch"
+          data-umami-event=`Footer (${Astro.url.pathname}): /uf`>Läs mer -></a
+        >
+      </p>
+    </div>
+    <div class="flex gap-5">
+      <a
+        href="mailto:kontakt@whsmedia.se"
+        target="_blank"
+        aria-label="WHS Media via e-post"
+        data-umami-event=`Footer (${Astro.url.pathname}): Email`
+      >
+        <Icon
+          name="mdi:email"
+          width="24"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
+        />
+      </a>
+      <a
+        href="https://instagram.com/whsmedia.se"
+        target="_blank"
+        aria-label="WHS Media via Instagram"
+        rel="prefetch"
+        data-umami-event=`Footer (${Astro.url.pathname}): Instagram`
+      >
+        <Icon
+          name="simple-icons:instagram"
+          width="24"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
+        />
+      </a>
+      <a
+        href="https://linkedin.com/company/whsmedia/"
+        target="_blank"
+        aria-label="WHS Media via LinkedIn"
+        rel="prefetch"
+        data-umami-event=`Footer (${Astro.url.pathname}): LinkedIn`
+      >
+        <Icon
+          name="simple-icons:linkedin"
+          width="24"
+          class="text-stone-500 transition duration-200 hover:text-whs-primary hover:opacity-100"
+        />
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,10 +1,10 @@
-// https://jampack.divriots.com/configuration/
-
 export default {
-    nocache: true,
-    image: {
-        external: {
-            process: 'download'
-        }
-    }   
-}
+  image: {
+    external: {
+      process: "download",
+    },
+  },
+  css: {
+    inline_critical_css: true,
+  },
+};

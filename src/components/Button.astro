@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  style: "solid" | "outline" | "outline-invert";
+  link: string;
+  target: string;
+  icon: string;
+  showIcon: "true" | "false";
+  text: string;
+}
+
+const { style, link, target, icon, showIcon, text } = Astro.props;
+---
+
+<div class="w-full sm:w-fit">
+  <a
+    href={link}
+    target={target}
+    class:list={[
+      "flex h-12 w-full select-none items-center justify-center gap-2.5 px-6 font-bold transition duration-200 hover:opacity-50 sm:w-fit",
+      style === "solid" && "bg-whs-primary text-stone-50",
+      style === "outline" && "border-2 border-whs-primary text-stone-50",
+      style === "outline-invert" &&
+        "border-2 border-whs-primary text-stone-900",
+    ]}
+    aria-label={text}
+    rel="prefetch"
+    data-umami-event=`Button (${Astro.url.pathname}): ${text} (${link})`
+  >
+    <Icon
+      name={icon}
+      width="24"
+      class:list={[
+        showIcon === "false" && "hidden",
+        showIcon === "true" && "block",
+      ]}
+    />
+    {text}
+  </a>
+</div>
